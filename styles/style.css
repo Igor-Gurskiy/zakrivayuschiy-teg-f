@@ -334,7 +334,7 @@
 
 .dialog {
   inline-size: clamp(21.313rem, 21.048rem + 1.127vi, 22.063rem);
-  block-size: 191px;
+  min-block-size: 191px;
   padding: 30px 40px;
   display: flex;
   flex-direction: column;
