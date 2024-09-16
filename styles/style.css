@@ -340,6 +340,8 @@
   flex-direction: column;
   gap: 24px;
   background-color: var(--bg-color);
+  position: fixed;
+  inset: 0;
 }
 
 .dialog:not([open]) {
