@@ -20,7 +20,7 @@
   min-block-size: 100dvb;
   font-family: var(--base-font), sans-serif;
   font-variation-settings: "wght" var(--font-weight-regular);
-  color: var(--text-color);
+  color: rgb(var(--text-color));
   background-color: var(--bg-color);
   background-image: repeating-linear-gradient(
       var(--line-color),
@@ -48,14 +48,13 @@
   display: flex;
   margin-block: 100px;
   background-color: var(--bg-color);
-  block-size: clamp(20.438rem, 19.535rem + 3.85vi, 23rem);
   inline-size: clamp(23.438rem, 16.285rem + 30.516vi, 43.75rem);
   flex-direction: column;
   align-items: center;
   border: 2px solid currentColor;
 }
 
-.header-title {
+.header__logo {
   font-size: clamp(3.063rem, 2.71rem + 1.502vi, 4.063rem);
   font-family: var(--acent-font), sans-serif;
   font-weight: 400;
@@ -63,7 +62,7 @@
   margin-block-end: 20px;
 }
 
-.header-subtitle {
+.header-title {
   font-family: var(--acent-font), sans-serif;
   font-weight: 400;
   text-transform: uppercase;
@@ -71,7 +70,8 @@
 }
 
 .header__theme-menu {
-  margin-block: 25px;
+  margin-block-start: 25px;
+  margin-block-end: 22px;
   align-self: end;
   margin-inline-end: clamp(8.313rem, 4.703rem + 15.399vi, 18.563rem);
 }
@@ -160,7 +160,6 @@
   font-family: var(--base-font), sans-serif;
   font-variation-settings: "wght" var(--font-weight-card-title);
   font-size: 18px;
-  line-height: 22px;
 }
 
 .card-image-section {
@@ -172,7 +171,7 @@
 .card-image {
   width: 100%;
   background-size: cover;
-  aspect-ration: 1/1;
+  aspect-ratio: 1/1;
 }
 
 .filter-brightness {
@@ -241,8 +240,9 @@
 }
 
 .card-button-block {
-  margin: 25px;
+  padding: 25px 25px 22px 25px;
   display: flex;
+  align-items: center;
   justify-content: end;
   gap: 6px;
 }
@@ -256,27 +256,29 @@
   align-items: center;
   cursor: pointer;
   appearance: none;
-}
-
-.card__icon-button:focus,
-.button {
-  outline: none;
+  justify-content: center;
+  outline: 2px solid rgb(var(--text-color), 0);
+  transition: outline 0.3s ease;
 }
 
 .card__icon-button:focus-visible {
-  outline: 2px solid currentColor;
-  transition: outline 0.3s ease;
+  outline: 2px solid rgb(var(--text-color), 1);
 }
 
 .card__like-button {
   background-color: transparent;
-  padding: 10.9px 35px;
-  padding-inline: 35px;
+  padding-block: 0px;
+  inline-size: 130px;
+  min-height: 40px;
+}
+
+.like-icon {
+  inline-size: 39px;
+  block-size: 36px;
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px var(--text-color);
-  transition: box-shadow 0.3s;
+  box-shadow: 2px 2px rgb(var(--text-color), 1);
 }
 
 .button {
@@ -284,11 +286,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid var(--text-color);
+  border: 2px solid rgb(var(--text-color));
   cursor: pointer;
   overflow: hidden;
   font-family: var(--acent-font), sans-serif;
   flex-direction: column;
+  transition: box-shadow 0.3s;
+  box-shadow: 2px 2px rgb(var(--text-color), 0);
 }
 
 .button::before {
@@ -303,7 +307,6 @@
 
 .button:hover::before {
   transform: translateX(0%);
-  transition: transform 0.5s ease-in-out;
 }
 
 .button__text {
@@ -317,17 +320,20 @@
   mix-blend-mode: difference;
 }
 
-.footer {
-  padding: 50px clamp(2.031rem, -9.357rem + 48.592vi, 34.375rem) 100px;
-}
-
-.footer-button {
+.button-save {
   padding: 15px 20px;
   background-color: var(--bg-color);
   gap: 8px;
+  margin: 0 clamp(2.031rem, -1.193rem + 13.756vi, 11.188rem) 100px;
 }
 
-.footer-image {
+.floppy {
+  z-index: 1;
+  color: var(--button-text);
+  mix-blend-mode: difference;
+}
+
+.save-image {
   inline-size: 28px;
   block-size: 28px;
 }
@@ -342,7 +348,6 @@
   background-color: var(--bg-color);
   position: fixed;
   inset: 0;
-  border: 2px solid var(--text-color);
 }
 
 .dialog:not([open]) {
@@ -365,17 +370,12 @@
   padding-block: 11px;
   inline-size: 100%;
   text-transform: uppercase;
+  border: 2px solid rgb(var(--text-color));
 }
 
 .dialog-image {
   block-size: 40px;
-  inline-size: 40px;
-}
-
-.container-image {
-  z-index: 1;
-  color: var(--button-text);
-  mix-blend-mode: difference;
+  min-inline-size: 40px;
 }
 
 .dialog-title {
@@ -393,11 +393,11 @@
 }
 
 @media (width >= 1440px) {
-  .footer-button {
+  .button-save {
     flex-direction: row;
   }
 
-  .footer-image {
+  .save-image {
     inline-size: 21px;
     block-size: 21px;
   }

@@ -8,13 +8,12 @@
   --font-weight-regular: 465;
   --font-weight-card-title: 785;
   --bg-color: #000;
-  --text-color: #00cc14;
+  --text-color: 0, 204, 20;
   --line-color: #000;
   --line-gradient-start: #007f0c;
   --line-gradient-end: #004306;
   --watermark-shadow: #000;
   --contour-color: #00cc14;
-  --filling: #ff0000;
   --button-text: #00cc14;
 }
 
@@ -22,13 +21,12 @@
   --font-weight-regular: 400;
   --font-weight-card-title: 700;
   --bg-color: #fff;
-  --text-color: #000;
+  --text-color: 0, 0, 0;
   --line-color: #d3d3d3;
   --line-gradient-start: #e7e7e7;
   --line-gradient-end: #1a1a1a;
   --watermark-shadow: #fff;
   --contour-color: #000;
-  --filling: #ff0000;
   --button-text: #fff;
 }
 
@@ -37,13 +35,12 @@
     --font-weight-regular: 465;
     --font-weight-card-title: 785;
     --bg-color: #000;
-    --text-color: #00cc14;
+    --text-color: 0, 204, 20;
     --line-color: #000;
     --line-gradient-start: #007f0c;
     --line-gradient-end: #004306;
     --watermark-shadow: #000;
     --contour-color: #00cc14;
-    --filling: #ff0000;
     --button-text: #00cc14;
   }
 }

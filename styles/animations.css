@@ -23,16 +23,16 @@
   }
 }
 
-.sparks {
+.like-icon .sparks {
   opacity: 0;
 }
 
-.core {
+.like-icon .core {
   fill: var(--bg-color);
   transition: fill 0.3s 0.03s linear;
 }
 
-.heart {
+.like-icon .heart {
   transform-origin: center;
 }
 
@@ -41,7 +41,7 @@
   transition: fill 0.3s linear;
 }
 
-.main-body {
+.like-icon .main-body {
   fill: var(--bg-color);
   transition: fill 0.3s linear;
 }
@@ -82,6 +82,11 @@
 
 .like-icon.is-liked .sparks {
   animation: sparks 0.3s 0.3s ease-in alternate;
+}
+
+.like-icon .countour {
+  fill: var(--contour-color);
+  transition: fill 0.1s linear;
 }
 
 @keyframes heart {

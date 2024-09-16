@@ -5,7 +5,7 @@
   --font-weight-regular: 400;
   --font-weight-card-title: 700;
   --bg-color: #fff;
-  --text-color: #000;
+  --text-color: 0, 0, 0;
   --line-color: #d3d3d3;
   --line-gradient-start: #e7e7e7;
   --line-gradient-end: #1a1a1a;
