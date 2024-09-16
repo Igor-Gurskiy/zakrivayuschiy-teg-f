@@ -359,6 +359,7 @@
   background-color: transparent;
   block-size: 40px;
   inline-size: 100%;
+  text-transform: uppercase;
 }
 
 .dialog-image {
