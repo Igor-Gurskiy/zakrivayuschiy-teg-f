@@ -357,7 +357,7 @@
 
 .dialog-button {
   background-color: transparent;
-  block-size: 38px;
+  padding-block: 9px;
   inline-size: 100%;
   text-transform: uppercase;
 }
