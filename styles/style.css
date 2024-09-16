@@ -215,7 +215,6 @@
     1px 0 var(--watermark-shadow), 0 -1px var(--watermark-shadow);
   opacity: 0.5;
   mix-blend-mode: hard-light;
-  z-index: 1
 }
 
 @supports ((text-stroke: 1px var(--watermark-shadow)) or (-webkit-text-stroke: 1px var(--watermark-shadow))) {
