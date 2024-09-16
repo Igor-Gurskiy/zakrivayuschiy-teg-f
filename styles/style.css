@@ -217,7 +217,7 @@
   mix-blend-mode: hard-light;
 }
 
-@support ((text-stroke: 1px #FFF) or (-webkit-text-stroke: 1px #FFF)) {
+@supports ((text-stroke: 1px var(--watermark-shadow)) or (-webkit-text-stroke: 1px var(--watermark-shadow))) {
   .card-watermark {
     -webkit-text-stroke: 1px var(--watermark-shadow);
     text-stroke: 1px var(--watermark-shadow);
@@ -329,7 +329,7 @@
 
 .footer-image {
   inline-size: 28px;
-  inline-size: 28px;
+  block-size: 28px;
 }
 
 .dialog {
