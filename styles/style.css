@@ -355,6 +355,10 @@
   align-items: center;
 }
 
+.form {
+  display: block;
+}
+
 .dialog-button {
   background-color: transparent;
   padding-block: 11px;
