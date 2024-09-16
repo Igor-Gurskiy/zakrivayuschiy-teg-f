@@ -338,11 +338,10 @@
   padding: 30px 40px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 30px;
   background-color: var(--bg-color);
   position: fixed;
   inset: 0;
-  border: 2px solid currentColor
 }
 
 .dialog:not([open]) {
@@ -358,7 +357,7 @@
 
 .dialog-button {
   background-color: transparent;
-  block-size: 40px;
+  block-size: 38px;
   inline-size: 100%;
   text-transform: uppercase;
 }
