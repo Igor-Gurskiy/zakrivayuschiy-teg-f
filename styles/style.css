@@ -168,6 +168,28 @@
   border-block: 2px solid currentColor;
 }
 
+.card-watermark {
+  position: absolute;
+  inset-inline-end: clamp(0.688rem, 0.379rem + 1.315vi, 1.563rem);
+  inset-block-start: 25px;
+  font-family: var(--acent-font), sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-shadow: -1px 0 var(--watermark-shadow), 0 1px var(--watermark-shadow),
+    1px 0 var(--watermark-shadow), 0 -1px var(--watermark-shadow);
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+}
+
+@supports ((text-stroke: 1px var(--watermark-shadow)) or (-webkit-text-stroke: 1px var(--watermark-shadow))) {
+  .card-watermark {
+    -webkit-text-stroke: 1px var(--watermark-shadow);
+    text-stroke: 1px var(--watermark-shadow);
+    text-shadow: none;
+  }
+}
+
 .card-image {
   width: 100%;
   background-size: cover;
@@ -200,28 +222,6 @@
 
 .filter-grayscale {
   filter: grayscale(1);
-}
-
-.card-watermark {
-  position: absolute;
-  inset-inline-end: clamp(0.688rem, 0.379rem + 1.315vi, 1.563rem);
-  inset-block-start: 25px;
-  font-family: var(--acent-font), sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 14px;
-  text-shadow: -1px 0 var(--watermark-shadow), 0 1px var(--watermark-shadow),
-    1px 0 var(--watermark-shadow), 0 -1px var(--watermark-shadow);
-  opacity: 0.5;
-  mix-blend-mode: hard-light;
-}
-
-@supports ((text-stroke: 1px var(--watermark-shadow)) or (-webkit-text-stroke: 1px var(--watermark-shadow))) {
-  .card-watermark {
-    -webkit-text-stroke: 1px var(--watermark-shadow);
-    text-stroke: 1px var(--watermark-shadow);
-    text-shadow: none;
-  }
 }
 
 .card_content {
@@ -272,10 +272,6 @@
   min-height: 40px;
 }
 
-.button:focus-visible {
-  box-shadow: 2px 2px rgb(var(--text-color), 1);
-}
-
 .button {
   position: relative;
   display: flex;
@@ -300,6 +296,10 @@
   transition: transform 0.5s ease-in-out;
 }
 
+.button:focus-visible {
+  box-shadow: 2px 2px rgb(var(--text-color), 1);
+}
+
 .button:hover::before {
   transform: translateX(0%);
 }
@@ -322,15 +322,15 @@
   margin: 0 clamp(2.031rem, -1.193rem + 13.756vi, 11.188rem) 100px;
 }
 
+.save-image {
+  inline-size: 28px;
+  block-size: 28px;
+}
+
 .floppy {
   z-index: 1;
   color: var(--button-text);
   mix-blend-mode: difference;
-}
-
-.save-image {
-  inline-size: 28px;
-  block-size: 28px;
 }
 
 .dialog {
@@ -351,21 +351,14 @@
   opacity: 0;
 }
 
+.dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
 .dialog-container {
   display: flex;
   gap: 12px;
   align-items: center;
-}
-
-.form {
-  display: block;
-}
-
-.dialog-button {
-  background-color: transparent;
-  padding-block: 11px;
-  inline-size: 100%;
-  text-transform: uppercase;
 }
 
 .dialog-image {
@@ -382,8 +375,15 @@
   color: rgb(var(--text-color));
 }
 
-.dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.75);
+.form {
+  display: block;
+}
+
+.dialog-button {
+  background-color: transparent;
+  padding-block: 11px;
+  inline-size: 100%;
+  text-transform: uppercase;
 }
 
 @media (width >= 1440px) {
