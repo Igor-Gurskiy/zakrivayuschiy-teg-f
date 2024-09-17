@@ -23,6 +23,11 @@
   }
 }
 
+.like-icon {
+  inline-size: 39px;
+  block-size: 36px;
+}
+
 .like-icon .sparks {
   opacity: 0;
 }
@@ -84,7 +89,7 @@
   animation: sparks 0.3s 0.3s ease-in alternate;
 }
 
-.like-icon .countour {
+.like-icon .contour {
   fill: var(--contour-color);
   transition: fill 0.1s linear;
 }
