@@ -1,8 +1,8 @@
-#Ссылка на GitHub
+Ссылка на GitHub
 
 https://github.com/Igor-Gurskiy/zakrivayuschiy-teg-f.git
 
-#Ссылка странички
+Ссылка странички
 
 https://igor-gurskiy.github.io/zakrivayuschiy-teg-f/
 
